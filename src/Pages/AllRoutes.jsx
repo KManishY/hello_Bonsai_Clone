@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import NavbarPage from "../Components/NavbarPage.jsx";
 import Home from "./Home/Home.jsx";
 import Login from "./Login/Login.jsx";
 import Pricing from "./Pricing/Pricing.jsx";
@@ -11,14 +12,15 @@ import Templets from "./Templets/Templets.jsx";
 const AllRoutes = () => {
 	return (
 		<div>
+			<NavbarPage />
 			<Routes>
-				<Route path="/" elevation={<Home />} />
-				<Route path="/products" elevation={<Products />} />
-				<Route path="/templets" elevation={<Templets />} />
-				<Route path="/pricing" elevation={<Pricing />} />
-				<Route path="/reviews" elevation={<Reviews />} />
-				<Route path="/login" elevation={<Login />} />
-				<Route path="/signup" elevation={<Signup />} />
+				<Route path="/" element={<Home />} />
+				<Route path="/products" element={<Products />} />
+				<Route path="/templets" element={<Templets />} />
+				<Route path="/pricing" element={<Pricing />} />
+				<Route path="/reviews" element={<Reviews />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
 			</Routes>
 		</div>
 	);

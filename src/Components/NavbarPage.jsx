@@ -1,22 +1,29 @@
 import React from 'react'
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const NavbarPage = () => {
-  return (
+	return (
 		<div>
 			<Navbar bg="light" expand="lg">
 				<Container>
 					<Navbar.Brand href="#home">
-						React-Bootstrap
+						<img
+							src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg"
+							alt="Logo"
+						/>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link href="#home">Home</Nav.Link>
-							<Nav.Link href="#link">Link</Nav.Link>
-							<NavDropdown
+							<Nav.Link as={Link} to="/">
+								Home
+							</Nav.Link>
+							<Nav.Link as={Link} to="/products">
+								Products
+							</Nav.Link>
+							{/* <NavDropdown
 								title="Dropdown"
 								id="basic-nav-dropdown">
 								<NavDropdown.Item href="#action/3.1">
@@ -32,13 +39,13 @@ const NavbarPage = () => {
 								<NavDropdown.Item href="#action/3.4">
 									Separated link
 								</NavDropdown.Item>
-							</NavDropdown>
+							</NavDropdown> */}
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
 		</div>
-  );
-}
+	);
+};
 
 export default NavbarPage
