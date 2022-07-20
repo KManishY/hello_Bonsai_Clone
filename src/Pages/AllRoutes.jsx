@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import NavbarPage from "../Components/NavbarPage.jsx";
+// import NavbarPage from "../Components/NavbarPage.jsx";
 import Home from "./Home/Home.jsx";
 import Login from "./Login/Login.jsx";
 import Pricing from "./Pricing/Pricing.jsx";
@@ -12,7 +12,7 @@ import Templets from "./Templets/Templets.jsx";
 const AllRoutes = () => {
 	return (
 		<div>
-			<NavbarPage />
+			{/* <NavbarPage /> */}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/products" element={<Products />} />

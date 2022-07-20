@@ -1,0 +1,87 @@
+.div1 {
+	margin-top: 100px;
+	display: flex;
+	/* border:2px solid red; */
+	justify-content: space-between;
+	height: 600px;
+	/* gap: 20px; */
+}
+.div1h {
+	/* font-family: 'Amerigo-bt roman opt',sans-serif; */
+	/* font-style: sans-serif; */
+	margin-top: 20px;
+	font-family: "Luxurious Roman", cursive;
+	/* font-family: sans-serif; */
+	text-align: left;
+	/* margin-top: 0; */
+	/* margin-bottom: 0; */
+	font-size: 2.75rem;
+	line-height: 130%;
+	color: #4c525a;
+}
+.div1p {
+	margin-top: 25px;
+	font-weight: 600;
+	font-size: 25px;
+	font-family: sans-serif;
+	text-align: left;
+	color: rgb(22, 20, 20);
+	/* font-size: 1.25rem; */
+	line-height: 140%;
+}
+.div1div1 {
+	width: 40%;
+}
+.div1div2 > img {
+	height: 500px;
+}
+.div2 {
+	margin-top: 10px;
+}
+
+.head1 {
+	text-align: center;
+	font-family: sans-serif;
+	/* color:black */
+}
+.para {
+	text-align: center;
+	font-size: 24px;
+	line-height: 30px;
+}
+.imgCont {
+	display: flex;
+	justify-content: space-around;
+}
+.div2div1 {
+	margin-bottom: 40px;
+}
+.imgDiv {
+	margin-top: 30px;
+}
+.globalWork {
+	display: flex;
+	justify-content: space-evenly;
+}
+.globalWorkIn {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.globalWorkIn h5 {
+	color: black;
+	text-align: left;
+	margin-bottom: 1px;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 300;
+	letter-spacing: 0.11px;
+}
+.grow {
+	display: flex;
+	background-color: rgb(242, 251, 254);
+	justify-content: space-evenly;
+      height:300px;
+      padding-top: 100px;
+      
+}
