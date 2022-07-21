@@ -8,6 +8,7 @@ import Products from "./Products/Products.jsx";
 import Reviews from "./Reviews/Reviews.jsx";
 import Signup from "./Signup/Signup.jsx";
 import Templets from "./Templets/Templets.jsx";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const AllRoutes = () => {
 	return (
@@ -18,9 +19,30 @@ const AllRoutes = () => {
 				<Route path="/products" element={<Products />} />
 				<Route path="/templets" element={<Templets />} />
 				<Route path="/pricing" element={<Pricing />} />
-				<Route path="/reviews" element={<Reviews />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/signup" element={<Signup />} />
+				<Route
+					path="/reviews"
+					element={
+						<ChakraProvider>
+							<Reviews />
+						</ChakraProvider>
+					}
+				/>
+				<Route
+					path="/login"
+					element={
+						<ChakraProvider>
+							<Login />
+						</ChakraProvider>
+					}
+				/>
+				<Route
+					path="/signup"
+					element={
+						<ChakraProvider>
+							<Signup />
+						</ChakraProvider>
+					}
+				/>
 			</Routes>
 		</div>
 	);
