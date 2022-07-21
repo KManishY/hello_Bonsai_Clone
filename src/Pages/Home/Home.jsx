@@ -22,7 +22,7 @@ const Home = () => {
 								borderRadius: "18px",
 								// border: "2px solid red",
 							}}>
-							<input
+							{/* <input
 								style={{
 									height: "80px",
 									boder: "2px solid #00b289",
@@ -32,7 +32,7 @@ const Home = () => {
 								}}
 								type="email"
 								palceholder="Enter your email"
-							/>
+							/> */}
 							<Button
 								style={{
 									height: "80px",
