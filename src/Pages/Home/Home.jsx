@@ -1,6 +1,9 @@
 import React from 'react'
 import { Button, Container } from "react-bootstrap";
+import BtnCard from "./BtnCard.jsx";
+import Crousal from "./Crousal.jsx";
 import HomeStyle from "./home.module.css";
+import { Link } from "react-router-dom";
 const Home = () => {
 	return (
 		<Container>
@@ -34,14 +37,29 @@ const Home = () => {
 								palceholder="Enter your email"
 							/> */}
 							<Button
+								as={Link}
+								to="/signup"
+								variant="success"
+								size="lg"
 								style={{
-									height: "80px",
-									width: "40%",
+									size: "50px",
+									marginLeft: "17px",
+									padding: "12px 27px 9px",
+									border: "1px solid #00b289",
+									borderRadius: " 4px",
 									backgroundColor:
-										" #00b289",
-									borderRadius: "0",
+										"#00b289",
+									color: " #fff",
+									fontSize: "13px",
+									// lineHeight: "16px",
+									fontWeight: " 700",
+									textAlign: "center",
+									letterSpacing: "2px",
+									textTransform:
+										"uppercase",
 								}}>
-								START FREE
+								{/* <Link to="/signup">Start Free</Link> */}
+								<h4>Start Free</h4>
 							</Button>
 						</div>
 					</div>
@@ -110,6 +128,14 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+			</Container>
+			<Container
+				style={{
+					marginTop: "80px",
+					boxSizing: "border-box",
+					height: "610px",
+				}}>
+				<BtnCard />
 			</Container>
 			<Container>
 				<div style={{ marginTop: "60px" }}>
@@ -209,6 +235,8 @@ const Home = () => {
 					</div>
 					<div style={{ textAlign: "center" }}>
 						<Button
+							as={Link}
+							to="/signup"
 							variant="success"
 							size="lg"
 							style={{
@@ -226,11 +254,14 @@ const Home = () => {
 								letterSpacing: "2px",
 								textTransform: "uppercase",
 							}}>
+							{/* <Link to="/signup">Start Free</Link> */}
 							<h4>Start Free</h4>
 						</Button>
 					</div>
 				</div>
+				{/* <RCard /> */}
 			</Container>
+			<Container>{/* <Crousal /> */}</Container>
 		</Container>
 	);
 };

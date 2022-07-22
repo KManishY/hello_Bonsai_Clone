@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 import {
 	FormControl,
 	FormLabel,
@@ -11,7 +12,6 @@ import {
 	Button,
 	Checkbox,
 	Spacer,
-	Link,
 	Flex,
 	Select,
 } from "@chakra-ui/react";
@@ -20,12 +20,13 @@ const Signup = () => {
 	return (
 		<Box
 			bgColor="rgb(250,252,253)"
-			style={{ border: "1px solid blue" }}>
-			<Flex p={5} mt={40} bgColor="white" direction="">
-				<Container
+			// style={{ border: "1px solid blue" }}
+		>
+			<Flex p={5} mt={40} bgColor="white" wrap="wrap">
+				<Box
 					mr={0}
 					style={{
-						width: "20rem",
+						Width: "26rem",
 						// border: "1px solid black",
 					}}>
 					<Flex
@@ -63,7 +64,7 @@ const Signup = () => {
 							</p>
 						</Box>
 					</Flex>
-				</Container>
+				</Box>
 
 				<Container p={0} ml={0} maxW="container.sm">
 					<Box
@@ -1508,6 +1509,8 @@ const Signup = () => {
 						</Box>
 
 						<Button
+							as={Link}
+							to="/login"
 							mt={7}
 							style={{ width: "100%" }}
 							colorScheme="teal"

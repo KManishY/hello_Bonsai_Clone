@@ -16,9 +16,23 @@ const AllRoutes = () => {
 			{/* <NavbarPage /> */}
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/products" element={<Products />} />
+				<Route
+					path="/products"
+					element={
+						<ChakraProvider>
+							<Products />
+						</ChakraProvider>
+					}
+				/>
 				<Route path="/templets" element={<Templets />} />
-				<Route path="/pricing" element={<Pricing />} />
+				<Route
+					path="/pricing"
+					element={
+						<ChakraProvider>
+							<Pricing />
+						</ChakraProvider>
+					}
+				/>
 				<Route
 					path="/reviews"
 					element={

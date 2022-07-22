@@ -1,26 +1,13 @@
 import React from 'react'
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
+import Rbox1 from "./Rbox1.jsx";
+import RCard from "./RCard.jsx";
 const Reviews = () => {
 	return (
-		<Box
-			style={{
-				border: "1px solid red",
-				width: "100%",
-				height: "400px",
-			}}>
-			<Container
-				maxW="container.sm"
-				style={{
-					border: "1px solid red",
-					width: "100%",
-					height: "400px",
-				}}>
-				<Text fontSize="5xl">Bonsai Reviews</Text>
-				<Text fontSize="3xl">
-					200,000+ Freelancers Love Bonsai. Here's why.
-				</Text>
-			</Container>
-		</Box>
+		<Container maxW="container.lg">
+			<Rbox1 />
+			<RCard />
+		</Container>
 	);
 };
 
