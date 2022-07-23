@@ -3,15 +3,11 @@ import {Link} from "react-router-dom";
 import {
 	FormControl,
 	FormLabel,
-	FormHelperText,
 	Input,
 	Box,
 	Container,
-	Heading,
 	Text,
 	Button,
-	Checkbox,
-	Spacer,
 	Flex,
 	Select,
 } from "@chakra-ui/react";
@@ -1487,9 +1483,9 @@ const Signup = () => {
 								By creating an acoount,you
 								accept our
 							</p>
-							<Link color="rgb(134,134,135)">
+							<p color="rgb(134,134,135)">
 								Terms and Conditions
-							</Link>
+							</p>
 						</Box>
 
 						<Button
