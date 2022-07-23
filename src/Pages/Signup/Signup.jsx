@@ -1,5 +1,6 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+// import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { Link, Navigate } from "react-router-dom";
 import {
 	FormControl,
 	FormLabel,
@@ -13,6 +14,22 @@ import {
 } from "@chakra-ui/react";
 import { GoogleButton } from "react-google-button";
 const Signup = () => {
+	const [formState, setFormState] = useState({
+		name: "",
+		email: "",
+		password: "",
+	});
+
+	function handleChange(e) {
+		const { name, value } = e.target;
+		setFormState({ ...formState, [name]: value });
+	}
+	function handleSubmit() {
+		console.log(formState);
+		localStorage.setItem("user", JSON.stringify(formState));
+		alert("Registered Successfully.....Please Login with same details");
+		// <Navigate to="/login" />;
+	}
 	return (
 		<Box
 			bgColor="rgb(250,252,253)"
@@ -107,6 +124,9 @@ const Signup = () => {
 							<Input
 								type="email"
 								placeholder="your@email.com"
+								name="email"
+								onChange={handleChange}
+								value={formState.email}
 								required
 							/>
 
@@ -116,6 +136,9 @@ const Signup = () => {
 								FULL NAME
 							</FormLabel>
 							<Input
+								name="name"
+								onChange={handleChange}
+								value={formState.name}
 								type="text"
 								placeholder="Jane Smith"
 							/>
@@ -125,6 +148,9 @@ const Signup = () => {
 								PASSWORD
 							</FormLabel>
 							<Input
+								name="password"
+								onChange={handleChange}
+								value={formState.password}
 								mb={5}
 								type="password"
 								placeholder="**********"
@@ -1491,6 +1517,7 @@ const Signup = () => {
 						<Button
 							mt={5}
 							color="white"
+							onClick={handleSubmit}
 							style={{ width: "100%" }}
 							bgColor="rgb(1,175,134)">
 							Create Free Account
@@ -1520,4 +1547,4 @@ const Signup = () => {
 	);
 };
 
-export default Signup
+export default Signup;

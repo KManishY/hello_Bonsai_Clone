@@ -9,7 +9,8 @@ import Reviews from "./Reviews/Reviews.jsx";
 import Signup from "./Signup/Signup.jsx";
 import Templets from "./Templets/Templets.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
-
+// import { PrivateRoute } from "../Private/PrivateRoute.jsx";
+import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx';
 const AllRoutes = () => {
 	return (
 		<div>
@@ -20,7 +21,9 @@ const AllRoutes = () => {
 					path="/products"
 					element={
 						<ChakraProvider>
-							<Products />
+							<PrivateRoute>
+								<Products />
+							</PrivateRoute>
 						</ChakraProvider>
 					}
 				/>
@@ -29,7 +32,9 @@ const AllRoutes = () => {
 					path="/pricing"
 					element={
 						<ChakraProvider>
-							<Pricing />
+							<PrivateRoute>
+								<Pricing />
+							</PrivateRoute>
 						</ChakraProvider>
 					}
 				/>
@@ -37,7 +42,9 @@ const AllRoutes = () => {
 					path="/reviews"
 					element={
 						<ChakraProvider>
-							<Reviews />
+							<PrivateRoute>
+								<Reviews />
+							</PrivateRoute>
 						</ChakraProvider>
 					}
 				/>
