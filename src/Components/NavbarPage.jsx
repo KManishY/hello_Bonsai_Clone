@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import "./navbar.css";
 const NavbarPage = () => {
 	return (
 		<div>
@@ -27,16 +28,23 @@ const NavbarPage = () => {
 						<Nav className="me-auto">
 							<NavDropdown
 								title="Products"
-								id="basic-nav-dropdown">
-								<NavDropdown.Item>
+								id="basic-nav-dropdown"
+								renderMenuOnMount={true}>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Bonsai Workflow
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Bonsai Tax
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Bonsai Cash
 								</NavDropdown.Item>
 								{/* <NavDropdown.Divider />
@@ -46,32 +54,47 @@ const NavbarPage = () => {
 							</NavDropdown>
 							<NavDropdown
 								title="Templets"
-								id="basic-nav-dropdown">
-								<NavDropdown.Item>
+								id="basic-nav-dropdown"
+								renderMenuOnMount={true}>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Contract Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Proposal Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Invoice Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Agreement Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Quote Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Scope of Work Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item>
+								<NavDropdown.Item
+									as={Link}
+									to="/products">
 									Brief Templets
 								</NavDropdown.Item>
 								{/* <NavDropdown.Divider />
