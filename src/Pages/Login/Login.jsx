@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../Context/AuthContext.jsx";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import {
 	FormControl,
 	FormLabel,
@@ -12,11 +12,13 @@ import {
 	Text,
 	Button,
 	Checkbox,
-	Spacer,
 	Link,
+	Spacer,
 } from "@chakra-ui/react";
 import { GoogleButton } from "react-google-button";
 const Login = () => {
+	let navigate = useNavigate();
+
 	const data = JSON.parse(localStorage.getItem("user")) || [];
 	// console.log("data", data);
 	const [formState, setFormState] = useState({
@@ -38,8 +40,9 @@ const Login = () => {
 			formState.password === data.password
 		) {
 			auth.handleLogin(data.name);
+			// console.log("Successfully");
 			alert("login success");
-			<Navigate to="/" />;
+			navigate("/");
 		} else {
 			console.log("wrong");
 			alert("Please enter the correct details");
