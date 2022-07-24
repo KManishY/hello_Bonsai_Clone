@@ -1,12 +1,35 @@
 import { Button } from "react-bootstrap";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { AuthContext } from "../Context/AuthContext.jsx";
 const NavbarPage = () => {
+	const { state, handleLogout } = useContext(AuthContext);
+
+	const { isAuth } = state;
+	// let name = "Login";
+
+	// useEffect(() => {
+	// 	{
+	// 		 name = isAuth ? "Logout" : "Login";
+	// 	}
+	// 	console.log(name);
+	// }, [isAuth]);
+
+	const handleout = (isAuth) => {
+		if (isAuth) {
+			// isAuth = !isAuth;
+			handleLogout();
+
+			// console.log(name);
+			// console.log("isAuth", isAuth);
+		}
+		return;
+	};
 	return (
 		<div>
 			<Navbar bg="white" expand="lg">
@@ -111,6 +134,9 @@ const NavbarPage = () => {
 						</Nav>
 						<Link to="/login">
 							<Button
+								onClick={() =>
+									handleout(isAuth)
+								}
 								variant="outline-success"
 								style={{
 									marginLeft: "17px",
@@ -128,7 +154,11 @@ const NavbarPage = () => {
 									textTransform:
 										"uppercase",
 								}}>
-								LOG IN
+								{/* LOG IN */}
+								{state.isAuth
+									? "Logout"
+									: "Login"}
+								{/* {name} */}
 							</Button>
 						</Link>
 						<Link to="/signup">

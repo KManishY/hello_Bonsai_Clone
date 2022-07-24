@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { GoogleLogin, GoogleLogout } from "react-google-login";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
 	FormControl,
 	FormLabel,
@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { GoogleButton } from "react-google-button";
 const Signup = () => {
+	let navigate = useNavigate();
 	const [formState, setFormState] = useState({
 		name: "",
 		email: "",
@@ -28,6 +29,7 @@ const Signup = () => {
 		console.log(formState);
 		localStorage.setItem("user", JSON.stringify(formState));
 		alert("Registered Successfully.....Please Login with same details");
+		navigate("/login");
 		// <Navigate to="/login" />;
 	}
 	return (
