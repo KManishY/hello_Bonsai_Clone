@@ -24,50 +24,43 @@ const NavbarPage = () => {
 		if (isAuth) {
 			// isAuth = !isAuth;
 			handleLogout();
-
-			// console.log(name);
-			// console.log("isAuth", isAuth);
 		}
 		return;
 	};
 	return (
-		<div>
-			<Navbar bg="white" expand="lg">
+		<div style={{zIndex:"99999"}}>
+			<Navbar bg='white' expand='lg' >
 				<Container
 					style={{
 						display: "flex !important",
 						// gap: "300px",
 						fontSize: "25px",
 						justifyContent: "space-around !important",
-					}}>
-					<Navbar.Brand as={Link} to="/">
+					}}
+				>
+					<Navbar.Brand as={Link} to='/'>
 						<img
-							src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg"
-							alt="Logo"
+							src='https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg'
+							alt='Logo'
 						/>
 					</Navbar.Brand>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto">
+					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+					<Navbar.Collapse id='basic-navbar-nav'>
+						<Nav className='me-auto'>
 							<NavDropdown
-								title="Products"
-								id="basic-nav-dropdown"
-								renderMenuOnMount={true}>
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								title='Products'
+								id='basic-nav-dropdown'
+								renderMenuOnMount={true}
+							>
+								<NavDropdown.Item as={Link} to='/products'>
 									Bonsai Workflow
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Bonsai Tax
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Bonsai Cash
 								</NavDropdown.Item>
 								{/* <NavDropdown.Divider />
@@ -76,48 +69,35 @@ const NavbarPage = () => {
 								</NavDropdown.Item> */}
 							</NavDropdown>
 							<NavDropdown
-								title="Templets"
-								id="basic-nav-dropdown"
-								renderMenuOnMount={true}>
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								title='Templets'
+								id='basic-nav-dropdown'
+								renderMenuOnMount={true}
+							>
+								<NavDropdown.Item as={Link} to='/products'>
 									Contract Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Proposal Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Invoice Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Agreement Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Quote Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Scope of Work Templets
 								</NavDropdown.Item>
 								<br />
-								<NavDropdown.Item
-									as={Link}
-									to="/products">
+								<NavDropdown.Item as={Link} to='/products'>
 									Brief Templets
 								</NavDropdown.Item>
 								{/* <NavDropdown.Divider />
@@ -125,19 +105,17 @@ const NavbarPage = () => {
 									Separated link
 								</NavDropdown.Item> */}
 							</NavDropdown>
-							<Nav.Link as={Link} to="/pricing">
+							<Nav.Link as={Link} to='/pricing'>
 								Pricing
 							</Nav.Link>
-							<Nav.Link as={Link} to="/reviews">
+							<Nav.Link as={Link} to='/reviews'>
 								Reviews
 							</Nav.Link>
 						</Nav>
-						<Link to="/login">
+						<Link to='/login'>
 							<Button
-								onClick={() =>
-									handleout(isAuth)
-								}
-								variant="outline-success"
+								onClick={() => handleout(isAuth)}
+								variant='outline-success'
 								style={{
 									marginLeft: "17px",
 									padding: "12px 27px 9px",
@@ -151,35 +129,32 @@ const NavbarPage = () => {
 									fontWeight: " 700",
 									textAlign: "center",
 									letterSpacing: "2px",
-									textTransform:
-										"uppercase",
-								}}>
+									textTransform: "uppercase",
+								}}
+							>
 								{/* LOG IN */}
-								{state.isAuth
-									? "Logout"
-									: "Login"}
+								{state.isAuth ? "Logout" : "Login"}
 								{/* {name} */}
 							</Button>
 						</Link>
-						<Link to="/signup">
+						<Link to='/signup'>
 							<Button
-								variant="success"
+								variant='success'
 								style={{
 									marginLeft: "17px",
 									padding: "12px 27px 9px",
 									border: "1px solid #00b289",
 									borderRadius: " 4px",
-									backgroundColor:
-										"#00b289",
+									backgroundColor: "#00b289",
 									color: " #fff",
 									fontSize: "13px",
 									// lineHeight: "16px",
 									fontWeight: " 700",
 									textAlign: "center",
 									letterSpacing: "2px",
-									textTransform:
-										"uppercase",
-								}}>
+									textTransform: "uppercase",
+								}}
+							>
 								Start Free
 							</Button>
 						</Link>
